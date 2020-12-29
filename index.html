@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/animations.css" />
+    <link rel="stylesheet" href="style/style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -32,5 +33,46 @@
         <button class="btn-secondary">PORTFOLIO</button>
       </div>
     </div>
+    <div class="card-section">
+      <p class="card-section-title">OUR STORIES</p>
+      <p class="card-section-description">
+        Lorem ipsum dolor si amet, an dus situ sint <br />pertinacia constituto,
+      </p>
+      <div class="card-wrapper">
+        <div class="card">
+          <img src="./img/layer.png" alt="img" />
+          <p class="card-text" id="card-title">ILLUSTRATION</p>
+          <div class="show-card-wrapper" id="card-one">
+            <p class="card-shown-text">
+              Lorem Ipsum is simply dummy text of <br />
+              the printing and typesetting industry.<br />
+              Lorem Ipsum has been the industry's<br />
+              standard dummy text ever since<br />
+              the 1500s
+            </p>
+            <img src="img/arrow-down.png" />
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/development.png" alt="img" />
+          <p class="card-text">TESTING</p>
+        </div>
+        <div class="card">
+          <img src="./img/monitor.png" alt="img" />
+          <p class="card-text">GRAPHICS</p>
+        </div>
+        <div class="card">
+          <img src="./img/cube.png" alt="img" />
+          <p class="card-text">Management</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      let title = document.getElementById("card-title");
+      let cardWrapper = document.getElementById("card-one");
+      title.addEventListener("mouseover", function () {
+        cardWrapper.classList.add("scale-up-top");
+      });
+    </script>
   </body>
 </html>
